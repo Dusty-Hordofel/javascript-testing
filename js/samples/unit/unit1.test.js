@@ -9,11 +9,15 @@ describe("sayHello Unit Test Suites", () => {
 
   it('should display "Bonjour Alexandra"', () => {
     expect(sayHello("Alexandra")).toEqual("Bonjour Alexandra");
-  });
+  }); //we can use toEqual() instead of toBe()
 
-  it('should display "Hello, Thomas"', () => {
-    expect(sayHello("Thomas")).toEqual("Hello, Thomas");
-  });
+  test('should display "Hello, Thomas"', () => {
+    expect(sayHello("Thomas")).toBe("Hello, Thomas");
+  }); //we can use test() instead of it()
+
+  // test('should display "Hello, Thomas"', () => {
+  //   expect(sayHello("Thomas")).not.toBe("Hello, Thomas");
+  // }); //we can use test() instead of it()
 });
 
 //pour faire tourner le test on fait : npm run test

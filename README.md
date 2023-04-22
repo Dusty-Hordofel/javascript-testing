@@ -11,3 +11,5 @@ $ node_modules/.bin/jest --coverage
 ```
 
 ### 5. [Matcher](https://jestjs.io/docs/expect#matchers)
+
+### 6. test API and ENV variable

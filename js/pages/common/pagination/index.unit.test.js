@@ -9,3 +9,5 @@ describe("Pagination Unit Test Suites", () => {
     expect(Pagination.getNumberOfPages(9)).not.toBe(1));
   it("should return 5", () => expect(Pagination.getNumberOfPages(40)).toBe(5));
 });
+
+//describe  vous permet de créer un bloc de tests (ou Test Suite)

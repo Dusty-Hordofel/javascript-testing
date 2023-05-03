@@ -1,21 +1,21 @@
 //II. With TDD approach
 
 import { render, screen } from "@testing-library/react";
-import Greet from "./Greet";
+import Greet from "../components/Greet";
 
 /**Greet should render a text "hello" and if a name is passed into a component it's should render hello followed by name */
 
 //describe is a function that takes two arguments, 1. name of the test suit, 2. function that contains the test
 //describe.only || describe.skip
 describe("Greet", () => {
-  test.skip("should render a text 'hello'", () => {
+  xit("should render a text 'hello'", () => {
     render(<Greet />);
     const greetElement = screen.getByText(/hello/i);
     expect(greetElement).toBeInTheDocument(); //expect "text element to be in the document"
   });
 
   //test.only || test.skip. we nest describe inside of each other
-  test("should render a text 'hello' followed by name", () => {
+  fit("should render a text 'hello' followed by name", () => {
     render(<Greet name="John" />);
     const greetElement = screen.getByText(/hello john/i);
     expect(greetElement).toBeInTheDocument();

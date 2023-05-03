@@ -1,7 +1,7 @@
 //II. With TDD approach
 
 import { render, screen } from "@testing-library/react";
-import Greet from "./Greet";
+import Greet from "../components/Greet";
 
 /**Greet should render a text "hello" and if a name is passed into a component it's should render hello followed by name */
 

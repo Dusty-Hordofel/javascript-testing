@@ -1,8 +1,9 @@
 import "./App.css";
-import Greet from "./components/greet/Greet";
+import Application from "./components/application/Application";
+// import Greet from "./components/greet/Greet";
 
 function App() {
-  return <Greet />;
+  return <Application />;
 }
 
 export default App;

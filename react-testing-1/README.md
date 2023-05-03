@@ -24,3 +24,42 @@ test("Greet render correctly", () => {
   expect(greetElement).toBeInTheDocument();
 });
 ```
+
+### 2. React TDD
+
+- test [Greet](react-testing-1/src/components/Greet.test.tsx)
+
+```tsx
+import { render, screen } from "@testing-library/react";
+import Greet from "./Greet";
+
+/**Greet should render a text "hello" and if a name is passed into a component it's should render hello followed by name */
+
+describe("Greet suit test", () => {
+  test("Greet should render a text 'hello'", () => {
+    render(<Greet />);
+    const greetElement = screen.getByText(/hello/i);
+    expect(greetElement).toBeInTheDocument(); //expect "text element to be in the document"
+  });
+
+  test("Greet should render a text 'hello' followed by name", () => {
+    render(<Greet name="John" />);
+    const greetElement = screen.getByText(/hello john/i);
+    expect(greetElement).toBeInTheDocument();
+  });
+});
+```
+
+- create a [Greet](react-testing-1/src/components/Greet.tsx)
+
+```tsx
+interface GreetProps {
+  name?: string;
+}
+
+const Greet = ({ name }: GreetProps) => {
+  return <div>Hello {name}</div>;
+};
+
+export default Greet;
+```

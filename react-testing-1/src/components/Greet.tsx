@@ -1,5 +1,18 @@
-const Greet = () => {
-  return <div>Hello</div>;
+//with TDD approach
+
+interface GreetProps {
+  name?: string;
+}
+
+const Greet = ({ name }: GreetProps) => {
+  return <div>Hello {name}</div>;
 };
 
 export default Greet;
+
+//I. Without TDD approach
+// const Greet = () => {
+//   return <div>Hello</div>;
+// };
+
+// export default Greet;

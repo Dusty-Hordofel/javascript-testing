@@ -1,0 +1,10 @@
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+
+//test accepts three arguments: a string to describe a test, a function that contains expectation, and an optional timeout value.
+test("renders learn react link", () => {
+  render(<App />); //creating a virtual DOM using the render function from react-testing-library
+  const linkElement = screen.getByText(/Hello/i); //screen from react testing library that allows us to query the virtual DOM. getByText is querying the virtual DOM for an element that contains the text "learn react"
+  expect(linkElement).toBeInTheDocument();
+});

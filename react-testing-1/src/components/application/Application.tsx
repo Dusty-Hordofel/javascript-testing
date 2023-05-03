@@ -7,10 +7,21 @@ const Application = (props: Props) => {
     <>
       <h1>Job application form</h1>
       <h2>Section one</h2>
+      <span title="close">X</span>
+      <img
+        src="https://plus.unsplash.com/premium_photo-1668241683760-154febd417ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+        alt="sophie"
+      />
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="fullname"
+            value="molomen"
+            onChange={() => {}}
+          />
         </div>
         <div>
           <label htmlFor="bio">Bio</label>

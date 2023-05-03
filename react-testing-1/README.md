@@ -237,3 +237,17 @@ describe("Application", () => {
   });
 });
 ```
+
+## RTL Queries-2
+
+### 9. getByLabelText
+
+### 10. getByPlaceholderText
+
+### 11. getByText
+
+### 12. getByDisplayValue
+
+### 13. getByAltText
+
+### 14. getByTitle
